@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>POTAG</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery-3.3.1.js" />
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="snow.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(e) {
+            $(".close").click(function() {
+                $(".right-side").toggleClass("right-side-show");
+                $(".tg").toggleClass("tg-show");
+            })
+            $(".article-right-child").click();
+            $(".left-button").click(function() {
+                $(".tg").toggleClass("tg-show");
+                $(".right-side").toggleClass("right-side-show");
+            })
+
+
+            $(".pop-up").addClass("pop-up-show");
+            $(".left-side").addClass("left-side-show");
+            $(".slide").children().hide();
+            $(".slide").children().eq(0).show();
+            var x = 1;
+            $(".load-bar").addClass("load-bar-show");
+            setInterval(() => {
+                if (x == 5) x = 0;
+                $(".load-bar").removeClass("load-bar-show");
+                $(".slide").children().eq(x - 1).hide(500);
+                $(".load-bar").addClass("load-bar-show");
+                $(".slide").children().eq(x).show();
+                x++;
+
+            }, 4000);
+            /*date*/
+            var hours = 24;
+            var minutes = 00;
+            var seconds = 00;
+            document.getElementById("date").innerHTML = hours + "h " +
+                minutes + "m " + seconds + "s ";
+            setInterval(function() {
+                    if (seconds == 0 && hours == 0 && minutes == 0) {
+                        clearInterval();
+                        document.getElementById("date").innerHTML = "EXPIRED";
+                    } else {
+                        if (seconds == 0 && hours == 24 && minutes == 0) {
+                            seconds = 59;
+                            minutes = 59;
+                            hours = 23;
+                        }
+                        if (seconds == 0) {
+                            seconds = 59;
+                            if (minutes == 0) minutes = 59;
+                            else minutes--;
+                            if (minutes == 0 && seconds == 0) {
+                                hours--;
+                            }
+                        }
+                        document.getElementById("date").innerHTML = hours + "h " +
+                            minutes + "m " + seconds + "s ";
+                        seconds--;
+                    }
+
+                },
+                1000);
+        });
+    </script>
+    <section>
+        <div class="frnt-end">
+            <div class="contact">
+                <i class="fab fa-facebook-f fa-2x"></i>
+                <i class="fab fa-instagram fa-2x"></i>
+                <i class="fab fa-telegram-plane fa-2x"></i>
+                <i class="fab fa-pinterest fa-2x"></i>
+            </div>
+            <div class="left-side">
+                <div class="logo">PO
+                </div>
+                <div class="launch">
+                    <h1>Launching in :</br>
+                        <p id="date"></p>
+                    </h1>
+                    Perfect and awesome template to present your future product or service.</br>
+                    Hooking audience attention is all in the opener.
+                </div>
+                <div class="side-button">
+                    <div class="left-button">More Informations</div>
+                    <div class="right-button">Notify Me!</div>
+                </div>
+            </div>
+            <div class="pop-up">
+                <div class="snow">
+                    <div class="snow-1">
+                        <div class="star-1"></div>
+                        <div class="star-2"></div>
+                        <div class="star-3"></div>
+                        <div class="star-4"></div>
+                        <div class="star-5"></div>
+                        <div class="star-6"></div>
+                        <div class="star-7"></div>
+                        <div class="star-8"></div>
+                        <div class="star-9"></div>
+                        <div class="star-10"></div>
+                        <div class="star-11"></div>
+                        <div class="star-12"></div>
+                        <div class="star-13"></div>
+                        <div class="star-14"></div>
+                        <div class="star-15"></div>
+                        <div class="star-16"></div>
+                        <div class="star-17"></div>
+                        <div class="star-18"></div>
+                        <div class="star-19"></div>
+                        <div class="star-20"></div>
+                        <div class="star-21"></div>
+                        <div class="star-22"></div>
+                        <div class="star-23"></div>
+                        <div class="star-24"></div>
+                        <div class="star-25"></div>
+                    </div>
+                    <div class="snow-2">
+                        <div class="star-26"></div>
+                        <div class="star-27"></div>
+                        <div class="star-28"></div>
+                        <div class="star-29"></div>
+                        <div class="star-30"></div>
+                        <div class="star-31"></div>
+                        <div class="star-32"></div>
+                        <div class="star-33"></div>
+                        <div class="star-34"></div>
+                        <div class="star-35"></div>
+                        <div class="star-36"></div>
+                        <div class="star-37"></div>
+                        <div class="star-38"></div>
+                        <div class="star-39"></div>
+                        <div class="star-40"></div>
+                        <div class="star-41"></div>
+                        <div class="star-42"></div>
+                        <div class="star-43"></div>
+                        <div class="star-44"></div>
+                        <div class="star-45"></div>
+                        <div class="star-46"></div>
+                        <div class="star-47"></div>
+                        <div class="star-48"></div>
+                        <div class="star-49"></div>
+                        <div class="star-50"></div>
+                    </div>
+                    <div class="snow-3">
+                        <div class="star-51"></div>
+                        <div class="star-52"></div>
+                        <div class="star-53"></div>
+                        <div class="star-54"></div>
+                        <div class="star-55"></div>
+                        <div class="star-56"></div>
+                        <div class="star-57"></div>
+                        <div class="star-58"></div>
+                        <div class="star-59"></div>
+                        <div class="star-60"></div>
+                        <div class="star-61"></div>
+                        <div class="star-62"></div>
+                        <div class="star-63"></div>
+                        <div class="star-64"></div>
+                        <div class="star-65"></div>
+                        <div class="star-66"></div>
+                        <div class="star-67"></div>
+                        <div class="star-68"></div>
+                        <div class="star-69"></div>
+                        <div class="star-70"></div>
+                        <div class="star-71"></div>
+                        <div class="star-72"></div>
+                        <div class="star-73"></div>
+                        <div class="star-74"></div>
+                        <div class="star-75"></div>
+                    </div>
+                    <div class="snow-4">
+                        <div class="star-76"></div>
+                        <div class="star-77"></div>
+                        <div class="star-78"></div>
+                        <div class="star-79"></div>
+                        <div class="star-80"></div>
+                        <div class="star-81"></div>
+                        <div class="star-82"></div>
+                        <div class="star-83"></div>
+                        <div class="star-84"></div>
+                        <div class="star-85"></div>
+                        <div class="star-86"></div>
+                        <div class="star-87"></div>
+                        <div class="star-88"></div>
+                        <div class="star-89"></div>
+                        <div class="star-90"></div>
+                        <div class="star-91"></div>
+                        <div class="star-92"></div>
+                        <div class="star-93"></div>
+                        <div class="star-94"></div>
+                        <div class="star-95"></div>
+                        <div class="star-96"></div>
+                        <div class="star-97"></div>
+                        <div class="star-98"></div>
+                        <div class="star-99"></div>
+                        <div class="star-100"></div>
+                    </div>
+
+                </div>
+                <div class="hv">
+                </div>
+                <div class="tg"></div>
+            </div>
+            <div class="load-bar"></div>
+            <div class="slide">
+                <img src="img/1.jpg">
+                <img src="img/2.jpg">
+                <img src="img/3.jpg">
+                <img src="img/4.jpg">
+                <img src="img/5.jpg">
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="close">X</div>
+            <div class="header-right">
+                <h1>LIGHT, VERSATILE & SURPRISING</h1>
+            </div>
+            <div class="section-right">
+                <div class="title-right">Hi, I'm Phly, your new template ready to use. Handmade, precisely built with the famous Bootstrap Framework. Bonjour, je suis Phly, votre nouveau template prêt à l'emploi. Fait main, construit avec précision grâce au célèbre Framework
+                    Bootstrap. 嗨，我是PHLY，新模板准备。手工制作的，正是建有著名的引导框架。Hallo, ich bin Phly, Ihre neue Vorlage bereit. Handmade, genau mit dem berühmten Bootstrap Framework erstellt. Hola, soy Phly, la nueva plantilla de lista. Hecho a mano, construido precisamente
+                    con el famoso Marco Bootstrap.
+                </div>
+                <div class="article-right">
+                    <div class="article-right-child"><img src="img/6.jpg">
+                        <div class="article-title">
+                            <h4>FLY IN THE SKY</h4>This is what I love, and can't stop loving!every moment, every hour, every minute.</div>
+                    </div>
+                    <div class="article-right-child"><img src="img/9.jpg">
+                        <div class="article-title">
+                            <h4>探索世界</h4>
+                            This is what I love, and can't stop loving!every moment, every hour, every minute.</div>
+                    </div>
+                    <div class="article-right-child"><img src="img/7.jpg">
+                        <div class="article-title">
+                            <h4>ENTRE CIEL MER</h4>
+                            This is what I love, and can't stop loving! I every moment, every hour, every minute.</div>
+                    </div>
+                    <div class="article-right-child"><img src="img/8.jpg">
+                        <div class="article-title">
+                            <h4>IN EINEM KOKON</h4>
+                            This is what I love, and can't stop loving! every moment, every hour, every minute.</div>
+                    </div>
+                </div>
+                <div class="form-contact">
+                    <form>
+                        <input type="text" class="name" placeholder="Your Name">
+                        <input type="email" class="gmail" placeholder="Your Email">
+                        <input type="text" class="subject" placeholder="Write the subject">
+                        <input type="text-area" class="mess" placeholder="Your message here... 20 characters Min">
+                        <input type="button" class="sent" value="Sent my Message">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="phone"><i class="fas fa-phone fa-2x"></i>
+                    </br>Phone: (+33) 66-1254-611 </br>
+                    Fax: (+38) 66-1254-989</div>
+                <div class="andress"><i class="fas fa-map-marker-alt fa-2x"></i></br> 66 Grand Central, </br>
+                    NY 66564, USA</div>
+                <div class="mail"><i class="fas fa-envelope-open fa-2x"></i> </br>phly@example.com </br>
+                    phly-pro@example.com
+                </div>
+            </div>
+            <div class="end">© POTAG - MADE FOR AWESOME PEOPLE</div>
+        </div>
+    </section>
+</body>
+
+</html>`

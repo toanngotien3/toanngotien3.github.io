@@ -1,0 +1,512 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+.section {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.slide {
+    width: auto;
+    height: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.load-bar {
+    background: rgb(235, 229, 229);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    transform: translateX(-100%);
+}
+
+.load-bar-show {
+    transition: 4s;
+    transform: translateX(0);
+}
+
+.pop-up {
+    overflow: hidden;
+    opacity: 0.7;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.pop-up-show {
+    transform: translateX(0);
+}
+
+.hv {
+    background: #20232D;
+    width: 70%;
+    height: 100%;
+}
+
+.tg {
+    transform-origin: 100% 0%;
+    background: #20232D;
+    width: 30%;
+    height: 115%;
+    border-right: 100px;
+    transform: rotate(20deg);
+    box-sizing: border-box;
+    padding-right: 2px;
+    border-right: 3px solid black;
+    transition: 0.5s;
+}
+
+.tg-show {
+    transform: rotate(0);
+}
+
+.left-side {
+    transition: 1.5s;
+    opacity: 0;
+    z-index: 4;
+    position: absolute;
+    height: 100%;
+    width: 45%;
+}
+
+.left-side-show {
+    opacity: 1;
+}
+
+.contact {
+    z-index: 5;
+    margin-left: 50px;
+    bottom: 5%;
+    position: absolute;
+    display: flex;
+    width: auto;
+}
+
+.contact i {
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    z-index: 4;
+    font-size: 100px;
+    margin-left: 70px;
+    color: white;
+}
+
+.launch {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-top: 50px;
+    color: white;
+    margin-left: 70px;
+}
+
+.launch h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.side-button {
+    margin-top: 40px;
+    width: 100%;
+    margin-left: 70px;
+    height: 200px;
+    display: flex;
+}
+
+.left-button {
+    font-weight: bold;
+    border: 2px solid white;
+    color: white;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+
+.left-button:hover,
+.right-button:hover {
+    background: #FFF;
+    color: #000;
+}
+
+.right-button {
+    background: #00c8aa;
+    transition: 0.5s;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    width: 30%;
+    height: 50px;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.right-side {
+    scroll-behavior: unset;
+    overflow-y: scroll;
+    border-left: 5px solid #00c8aa;
+    width: 40%;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    z-index: 4;
+    background: rgb(255, 254, 251);
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.right-side-show {
+    transform: scaleX(1);
+}
+
+.snow {
+    transform: rotate(40deg);
+    transition: 2s;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+}
+
+.snow-3 {
+    width: 60%;
+    height: 60%;
+    animation-name: go3;
+    animation-duration: 12s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+}
+
+.snow-4 {
+    width: 60%;
+    height: 60%;
+    animation-name: go4;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+}
+
+.snow-2 {
+    width: 60%;
+    height: 60%;
+    animation-name: go2;
+    animation-duration: 16s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+}
+
+.snow-1 {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    animation-name: go1;
+    animation-duration: 14s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+div[class^="star"] {
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    z-index: 90;
+}
+
+.snow-1 div[class^="star"] {
+    width: 5px;
+    height: 5px;
+}
+
+.snow-2 div[class^="star"] {
+    width: 2px;
+    height: 2px;
+}
+
+.snow-3 div[class^="star"] {
+    width: 3px;
+    height: 3px;
+}
+
+.snow-4 div[class^="star"] {
+    width: 4px;
+    height: 3px;
+}
+
+#date {
+    transition: 1s;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@keyframes go4 {
+    from {
+        top: 50%;
+        right: 0;
+    }
+    to {
+        top: 0;
+        right: 100%;
+    }
+}
+
+@keyframes go3 {
+    from {
+        top: -100%;
+        right: 50%;
+    }
+    to {
+        top: 100%;
+        right: 0;
+    }
+}
+
+@keyframes go1 {
+    from {
+        top: 70%;
+        right: 60%;
+    }
+    to {
+        top: -100%;
+        right: -50%;
+    }
+}
+
+@keyframes go2 {
+    from {
+        top: 50%;
+        right: 90%;
+    }
+    to {
+        top: -100%;
+        right: 0;
+    }
+}
+
+.article-right {
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-right-child {
+    position: relative;
+    width: 40%;
+    height: 200px;
+    border: 1px solid rgb(172, 172, 172);
+    margin: 15px;
+}
+
+.article-right-child img {
+    width: 100%;
+    height: 100%;
+}
+
+.article-title {
+    color: #000;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    background: #FFF;
+    width: 100%;
+    height: 50%;
+}
+
+.article-title h4 {
+    font-size: 20px;
+}
+
+.header-right {
+    text-align: center;
+}
+
+.section-right {
+    padding: 20px;
+    /* text-align: center; */
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.article-right-child:hover .article-title {
+    transform: translateY(100%);
+    transition: 0.5s;
+    color: #FFF;
+}
+
+.article-right-child:hover .article-title h4 {
+    color: #000;
+}
+
+.close {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    color: #000;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.form-contact form {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.name,
+.gmail,
+.subject,
+.mess {
+    padding: 10px;
+    margin-bottom: 5%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: 400;
+    outline: medium none;
+    color: #000;
+}
+
+.name {
+    width: 45%;
+    height: auto;
+}
+
+.gmail {
+    width: 45%;
+    height: auto;
+}
+
+.subject {
+    width: 100%;
+    height: auto;
+}
+
+.mess {
+    border: none;
+    padding-bottom: 150px;
+    width: 100%;
+}
+
+.sent {
+    border: none;
+    height: 40px;
+    width: 100%;
+    color: white;
+    background: #00c8aa;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-right {
+    margin-bottom: 150px;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-right i {
+    margin-bottom: 10px;
+    color: #00c8aa;
+}
+
+.end {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+@media (max-width:1024px) {
+    html,
+    body {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: relative;
+    }
+    .slide img {
+        width: 100%;
+        height: 670px;
+    }
+    .right-side {
+        overflow-y: scroll;
+        position: relative;
+        width: 100%;
+        height: 1000px;
+        background: #FFF;
+        transform: scaleX(1);
+    }
+    .frnt-end {
+        position: relative;
+        width: 100%;
+        height: 670px;
+    }
+    .pop-up {
+        width: 100%;
+        transform: translateX(0);
+    }
+    .tg {
+        transform: rotate(0);
+    }
+    .lauch {
+        width: 100%;
+    }
+    .left-side {
+        overflow: hidden;
+        width: 100%;
+    }
+}
